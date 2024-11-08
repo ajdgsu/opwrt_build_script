@@ -1,0 +1,19 @@
+uci batch << EOF
+set watchcat.@watchcat[0]=watchcat
+set watchcat.@watchcat[0].mode='restart_iface'
+set watchcat.@watchcat[0].period='30'
+set watchcat.@watchcat[0].pinghosts='baidu.com'
+set watchcat.@watchcat[0].addressfamily='ipv4'
+set watchcat.@watchcat[0].pingperiod='10'
+set watchcat.@watchcat[0].pingsize='standard'
+set watchcat.@watchcat[0].interface='pppoe-wan'
+set watchcat.@watchcat[1]=watchcat
+set watchcat.@watchcat[1].mode='run_script'
+set watchcat.@watchcat[1].script='service mihomo restart'
+set watchcat.@watchcat[1].period='30'
+set watchcat.@watchcat[1].pinghosts='equinix.com'
+set watchcat.@watchcat[1].addressfamily='ipv4'
+set watchcat.@watchcat[1].pingperiod='10'
+set watchcat.@watchcat[1].pingsize='standard'
+commit
+EOF
