@@ -1,0 +1,6 @@
+{
+    "auth_secret": "auth_secret",
+    "url": "ws://172.16.1.88:3000/monitor",
+    "net_name": "br-lan",
+    "name": "CN-Home-OpenWrt"
+    }
