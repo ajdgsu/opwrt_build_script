@@ -1,0 +1,9 @@
+uci batch << EOF
+set mihomo.config.start_delay='3'
+set mihomo.config.mixin='0'
+set mihomo.config.fast_reload='0'
+set mihomo.mixin.dns_mode='fake-ip'
+set mihomo.mixin.fake_ip_range='28.0.0.1/8'
+set mihomo.mixin.ui_url='https://raw.e11z.net/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip'
+commit
+EOF
