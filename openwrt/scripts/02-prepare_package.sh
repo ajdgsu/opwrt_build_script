@@ -167,3 +167,9 @@ git clone https://$github/sbwml/package_kernel_tcp-brutal package/kernel/tcp-bru
 
 # watchcat - clean config
 true > feeds/packages/utils/watchcat/files/watchcat.config
+
+# luci-app-qosmate
+git clone https://$github/hudra0/luci-app-qosmate.git package/new/luci-app-qosmate
+
+# qosmate
+git clone https://$github/hudra0/qosmate.git package/new/qosmate

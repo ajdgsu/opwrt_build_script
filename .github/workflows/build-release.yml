@@ -89,7 +89,7 @@ jobs:
       uses: sbwml/actions@openwrt-build-setup
 
     - name: Install LLVM
-      uses: sbwml/actions@install-llvm
+      uses: ajdgsu/actions@install-llvm
 
     - name: Restore Cached
       if: ${{ github.event.inputs.ccache == 'true' && matrix.device != 'armv8' && matrix.device != 'nanopi-r4s' }}
