@@ -7,7 +7,7 @@ index 2568fb3..13a0d5f 100644
  	$(STAGING_DIR_HOST)/bin/mksquashfs3-lzma \
  		$@.fakefs $@.fakesquashfs \
 -		-noappend -root-owned -be -nopad -b 65536 \
-+		-noappend -root-owned -Xcompression-level 1 -be -nopad -b 65536 \
++		-noappend -root-owned -comp xz -Xe -Xbcj arm -Xpreset 0 -Xstrategy default,filtered,huffman_only,run_length_encoded,fixed -be -nopad -b 65536 \
  		$(if $(SOURCE_DATE_EPOCH),-fixed-time $(SOURCE_DATE_EPOCH))
  	cat $@.fakesquashfs >> $@
  endef
