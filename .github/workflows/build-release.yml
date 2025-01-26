@@ -34,8 +34,7 @@ jobs:
       fail-fast: false
       matrix:
         device:
-        - x86_64
-        - nanopi-r5s
+        - nanopi-r4s
     defaults:
       run:
         shell: bash
