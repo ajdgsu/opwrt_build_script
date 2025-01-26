@@ -16,7 +16,7 @@ index 2568fb3..13a0d5f 100644
  	$(STAGING_DIR_HOST)/bin/mksquashfs4 \
  		$@.fakefs $@.fakesquashfs \
 -		-nopad -noappend -root-owned
-+		-nopad -noappend -root-owned -Xcompression-level 1
++		-nopad -noappend -root-owned -comp xz -Xe -Xbcj arm -Xpreset 0 -Xstrategy default,filtered,huffman_only,run_length_encoded,fixed
  	cat $@.fakesquashfs >> $@
  endef
  
