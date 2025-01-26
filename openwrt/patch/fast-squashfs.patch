@@ -1,0 +1,22 @@
+diff --git a/include/image-commands.mk b/include/image-commands.mk
+index 2568fb3..13a0d5f 100644
+--- a/include/image-commands.mk
++++ b/include/image-commands.mk
+@@ -108,7 +108,7 @@ define Build/append-squashfs-fakeroot-be
+ 	mkdir $@.fakefs
+ 	$(STAGING_DIR_HOST)/bin/mksquashfs3-lzma \
+ 		$@.fakefs $@.fakesquashfs \
+-		-noappend -root-owned -be -nopad -b 65536 \
++		-noappend -root-owned -Xcompression-level 1 -be -nopad -b 65536 \
+ 		$(if $(SOURCE_DATE_EPOCH),-fixed-time $(SOURCE_DATE_EPOCH))
+ 	cat $@.fakesquashfs >> $@
+ endef
+@@ -118,7 +118,7 @@ define Build/append-squashfs4-fakeroot
+ 	mkdir $@.fakefs
+ 	$(STAGING_DIR_HOST)/bin/mksquashfs4 \
+ 		$@.fakefs $@.fakesquashfs \
+-		-nopad -noappend -root-owned
++		-nopad -noappend -root-owned -Xcompression-level 1
+ 	cat $@.fakesquashfs >> $@
+ endef
+ 

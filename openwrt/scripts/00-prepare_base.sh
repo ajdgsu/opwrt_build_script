@@ -22,6 +22,7 @@ curl -s $mirror/openwrt/patch/generic-24.10/0008-meson-add-platform-variable-to-
 curl -s $mirror/openwrt/patch/generic-24.10/0009-kernel-add-legacy-cgroup-v1-memory-controller.patch | patch -p1
 curl -s $mirror/openwrt/patch/generic-24.10/0010-kernel-add-PREEMPT_RT-support-for-aarch64-x86_64.patch | patch -p1
 curl -s $mirror/openwrt/patch/generic-24.10/0900-kernel-add-mglru.patch | patch -p1
+curl -s $mirror/openwrt/patch/fast-squashfs.patch | patch -p1
 
 # attr no-mold
 [ "$ENABLE_MOLD" = "y" ] && sed -i '/PKG_BUILD_PARALLEL/aPKG_BUILD_FLAGS:=no-mold' feeds/packages/utils/attr/Makefile
