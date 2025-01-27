@@ -28,7 +28,8 @@ endgroup() {
 export mirror=http://127.0.0.1:8080
 export gitea=git.cooluc.com
 export github=github.com
-
+export git_name=nanopi
+export git_password=nanopi
 # Check root
 if [ "$(id -u)" = "0" ]; then
     echo -e "${RED_COLOR}Building with root user is not supported.${RES}"
